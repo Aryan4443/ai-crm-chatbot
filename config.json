@@ -1,0 +1,36 @@
+{
+  "model": {
+    "intent_model_name": "distilbert-base-uncased",
+    "sentiment_model_name": "cardiffnlp/twitter-roberta-base-sentiment-latest",
+    "max_length": 128,
+    "device": "cpu"
+  },
+  "api": {
+    "host": "0.0.0.0",
+    "port": 5001,
+    "debug": false
+  },
+  "security": {
+    "jwt_secret_key": "your-secret-key-change-in-production",
+    "jwt_expiration": 3600,
+    "bcrypt_rounds": 12
+  },
+  "logging": {
+    "log_file": "logs/crm_chatbot.log",
+    "analytics_file": "logs/analytics.json",
+    "log_level": "INFO"
+  },
+  "intents": [
+    "greeting",
+    "product_inquiry",
+    "pricing",
+    "support",
+    "complaint",
+    "order_status",
+    "account_management",
+    "technical_issue",
+    "billing",
+    "goodbye"
+  ]
+}
+
